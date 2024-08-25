@@ -20,7 +20,7 @@ def test_add_product_to_cart():
         browser.driver.add_cookie({'name': 'NOPCOMMERCE.AUTH', 'value': cookie})
         browser.open('/')
     with allure.step('Add product to cart from API'):
-        result_cart = add_product_to_cart(Add_product_to_cart='/addproducttocart/catalog/31/1/1', cookie=cookie)
+        add_product_to_cart(Add_product_to_cart='/addproducttocart/catalog/31/1/1', cookie=cookie)
     with allure.step('Verify cart'):
         browser.element('.ico-cart .cart-label').click()
         browser.element('.product-name').should(have.text('14.1-inch Laptop'))
@@ -42,7 +42,7 @@ def test_add_digital_downloads_to_cart():
         browser.driver.add_cookie({'name': 'NOPCOMMERCE.AUTH', 'value': cookie})
         browser.open('/')
     with allure.step('Add product to cart from API'):
-        result_cart = add_product_to_cart(Add_product_to_cart='/addproducttocart/catalog/52/1/1', cookie=cookie)
+        add_product_to_cart(Add_product_to_cart='/addproducttocart/catalog/52/1/1', cookie=cookie)
     with allure.step('Verify cart'):
         browser.element('.ico-cart .cart-label').click()
         browser.element('.product-name').should(have.text('Music 2'))

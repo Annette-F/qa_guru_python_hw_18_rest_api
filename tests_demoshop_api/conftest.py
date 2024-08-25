@@ -1,6 +1,5 @@
 from selene import browser
 import pytest
-from utils import attach
 from dotenv import load_dotenv
 import os
 
@@ -17,10 +16,5 @@ def setting_browser(request):
     browser.config.window_height = 1080
 
     yield
-
-    attach.add_screenshot(browser)
-    attach.add_logs(browser)
-    attach.add_html(browser)
-    attach.add_video(browser)
 
     browser.quit()

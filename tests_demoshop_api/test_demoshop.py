@@ -18,7 +18,6 @@ def test_add_product_to_cart():
     with allure.step('Open main page Demowebshop'):
         browser.open('/')
         browser.driver.add_cookie({'name': 'NOPCOMMERCE.AUTH', 'value': cookie})
-        browser.open('/')
     with allure.step('Add product to cart from API'):
         add_product_to_cart(Add_product_to_cart='/addproducttocart/catalog/31/1/1', cookie=cookie)
     with allure.step('Verify cart'):

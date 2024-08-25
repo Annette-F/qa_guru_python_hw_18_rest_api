@@ -2,7 +2,8 @@ from selene import browser, have
 from selene.support.conditions import have
 import allure
 from allure_commons.types import Severity
-from tests_demoshop_api.conftest import authorization_with_api, clear_cart, add_product_to_cart
+from utils.authoriaztion import authorization_with_api
+from utils.cart import add_product_to_cart, clear_cart
 
 
 @allure.tag('Web')
